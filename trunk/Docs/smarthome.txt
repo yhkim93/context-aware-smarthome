@@ -1,0 +1,17 @@
+SmartHome generalitati
+----------------------
+
+
+
+1. http://www.shdir.no/vp/multimedia/archive/00004/IS-1216E_Smart_home_t_4103a.pdf - Smart Home Technology Norvegia
+
+
+
+
+Ontologii + Context Aware
+-----------------------
+
+1. http://www.webont.org/owled/2007/PapersPDF/submission_37.pdf
+2. http://www1.i2r.a-star.edu.sg/~tgu/gutao/paper/IJHWRS'05.pdf
+3. http://cost295.lboro.ac.uk/nacho/33.pdf
+4. http://www.ksl.stanford.edu/kst/what-is-an-ontology.html
