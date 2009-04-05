@@ -1,0 +1,192 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: What is an Ontology?
+Date: Sun, 5 Apr 2009 14:58:46 +0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.ksl.stanford.edu/kst/what-is-an-ontology.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>What is an Ontology?</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY>
+<H1>What is an Ontology?</H1>
+<P><EM>This definition was originally proposed in <A=20
+href=3D"http://www.ksl.stanford.edu/KSL_Abstracts/KSL-92-71.html">1992</A=
+> and=20
+posted as shown below. See an updated <A=20
+title=3D"updated definition of ontology (Computer Science) by Tom =
+Gruber"=20
+href=3D"http://tomgruber.org/writing/ontology-definition-2007.htm">defini=
+tion of=20
+ontology (computer science)</A> that accounts for the literature before =
+and=20
+after that posting, with links to further readings.</EM></P>
+<P>
+<ADDRESS><A href=3D"http://tomgruber.org/">Tom Gruber</A>=20
+&lt;gruber@ksl.stanford.edu&gt;</ADDRESS>
+<P>
+<DL>
+  <DT>Short answer:=20
+  <DD>An ontology is a specification of a conceptualization. </DD></DL>
+<P>The word "ontology" seems to generate a lot of controversy in =
+discussions=20
+about AI. It has a long history in philosophy, in which it refers to the =
+subject=20
+of existence. It is also often confused with epistemology, which is =
+about=20
+knowledge and knowing.=20
+<P>In the context of knowledge sharing, I use the term ontology to mean =
+a=20
+<I>specification of a conceptualization</I>. That is, an ontology is a=20
+description (like a formal specification of a program) of the concepts =
+and=20
+relationships that can exist for an agent or a community of agents. This =
+
+definition is consistent with the usage of ontology as=20
+set-of-concept-definitions, but more general. And it is certainly a =
+different=20
+sense of the word than its use in philosophy.=20
+<P>What is important is what an ontology is <I>for</I>. My colleagues =
+and I have=20
+been designing ontologies for the purpose of enabling knowledge sharing =
+and=20
+reuse. In that context, an ontology is a specification used for making=20
+ontological commitments. The formal definition of ontological commitment =
+is=20
+given below. For pragmetic reasons, we choose to write an ontology as a =
+set of=20
+definitions of formal vocabulary. Although this isn't the only way to =
+specify a=20
+conceptualization, it has some nice properties for knowledge sharing =
+among AI=20
+software (e.g., semantics independent of reader and context). =
+Practically, an=20
+ontological commitment is an agreement to use a vocabulary (i.e., ask =
+queries=20
+and make assertions) in a way that is consistent (but not complete) with =
+respect=20
+to the theory specified by an ontology. We build agents that commit to=20
+ontologies. We design ontologies so we can share knowledge with and =
+among these=20
+agents.=20
+<P>This definition is given in the article:=20
+<P>T. R. Gruber. A translation approach to portable ontologies. =
+<I>Knowledge=20
+Acquisition</I>, 5(2):199-220, 1993. <A=20
+href=3D"http://tomgruber.org/writing/ontolingua-kaj-1993.htm">Available =
+on=20
+line</A>.=20
+<P>A more detailed description is given in=20
+<P>T. R. Gruber. Toward principles for the design of ontologies used for =
+
+knowledge sharing. Presented at the Padua workshop on Formal Ontology, =
+March=20
+1993, later published in <I>International Journal of Human-Computer =
+Studies</I>,=20
+Vol. 43, Issues 4-5, November 1995, pp. 907-928. <A=20
+href=3D"http://tomgruber.org/writing/onto-design.htm">Available =
+online</A>.=20
+<P>With an excerpt attached.=20
+<HR>
+
+<H2>Ontologies as a specification mechanism</H2>A body of formally =
+represented=20
+knowledge is based on a <I>conceptualization</I>: the objects, concepts, =
+and=20
+other entities that are assumed to exist in some area of interest and =
+the=20
+relationships that hold among them (Genesereth &amp; Nilsson, 1987) . A=20
+conceptualization is an abstract, simplified view of the world that we =
+wish to=20
+represent for some purpose. Every knowledge base, knowledge-based =
+system, or=20
+knowledge-level agent is committed to some conceptualization, explicitly =
+or=20
+implicitly.
+<P>An <B>ontology</B> is an explicit specification of a =
+conceptualization. The=20
+term is borrowed from philosophy, where an Ontology is a systematic =
+account of=20
+Existence. For AI systems, what "exists" is that which can be =
+represented. When=20
+the knowledge of a domain is represented in a declarative formalism, the =
+set of=20
+objects that can be represented is called the universe of discourse. =
+This set of=20
+objects, and the describable relationships among them, are reflected in =
+the=20
+representational vocabulary with which a knowledge-based program =
+represents=20
+knowledge. Thus, in the context of AI, we can describe the ontology of a =
+program=20
+by defining a set of representational terms. In such an ontology, =
+definitions=20
+associate the names of entities in the universe of discourse (e.g., =
+classes,=20
+relations, functions, or other objects) with human-readable text =
+describing what=20
+the names mean, and formal axioms that constrain the interpretation and=20
+well-formed use of these terms. Formally, an ontology is the statement =
+of a=20
+logical theory.<A=20
+href=3D"http://www.ksl.stanford.edu/kst/what-is-an-ontology.html#1">[1]</=
+A>
+<P>We use common ontologies to describe <I>ontological commitments</I> =
+for a set=20
+of agents so that they can communicate about a domain of discourse =
+without=20
+necessarily operating on a globally shared theory. We say that an agent=20
+<B>commits</B> to an ontology if its observable actions are consistent =
+with the=20
+definitions in the ontology. The idea of ontological commitments is =
+based on the=20
+Knowledge-Level perspective (Newell, 1982) . The Knowledge Level is a =
+level of=20
+description of the knowledge of an agent that is independent of the =
+symbol-level=20
+representation used internally by the agent. Knowledge is attributed to =
+agents=20
+by observing their actions; an agent "knows" something if it acts <I>as =
+if</I>=20
+it had the information and is acting rationally to achieve its goals. =
+The=20
+"actions" of agents---including knowledge base servers and =
+knowledge-based=20
+systems--- can be seen through a tell and ask functional interface =
+(Levesque,=20
+1984) , where a client interacts with an agent by making logical =
+assertions=20
+(tell), and posing queries (ask).
+<P>Pragmatically, a common ontology defines the vocabulary with which =
+queries=20
+and assertions are exchanged among agents. Ontological commitments are=20
+agreements to use the shared vocabulary in a coherent and consistent =
+manner. The=20
+agents sharing a vocabulary need not share a knowledge base; each knows =
+things=20
+the other does not, and an agent that commits to an ontology is not =
+required to=20
+answer all queries that can be formulated in the shared vocabulary.=20
+<P>In short, a commitment to a common ontology is a guarantee of =
+consistency,=20
+but not completeness, with respect to queries and assertions using the=20
+vocabulary defined in the ontology.=20
+<P>Notes
+<P>[1] Ontologies are often equated with taxonomic hierarchies of =
+classes, but=20
+class definitions, and the subsumption relation, but ontologies need not =
+be=20
+limited to these forms. Ontologies are also not limited to conservative=20
+definitions, that is, definitions in the traditional logic sense that =
+only=20
+introduce terminology and do not add any knowledge about the world =
+(Enderton,=20
+1972) . To specify a conceptualization one needs to state axioms that do =
+
+constrain the possible interpretations for the defined terms. =
+</P></BODY></HTML>
