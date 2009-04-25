@@ -15,6 +15,7 @@ Inter-Science, 2005.
 Implementari existente
 -----------------------
 [1] Mozer, 1998; http://www.cs.colorado.edu/~mozer/house/
+[2] http://architecture.mit.edu/house_n/index.html
 
 
 
