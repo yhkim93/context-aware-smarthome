@@ -4,6 +4,17 @@ SmartHome generalitati
 
 
 1. http://www.shdir.no/vp/multimedia/archive/00004/IS-1216E_Smart_home_t_4103a.pdf - Smart Home Technology Norvegia
+2. Frances K. Aldrich, “Smart Homes: Past, Presen
+t and Future,” Inside the Smart Home, pp. 17-39
+, London: Springer-Verlag UK, 2003.
+3. D. J. Cook and S.K. Das, “Smart Environments:
+Technology, Protocols, and Applications,” Wiley
+Inter-Science, 2005.
+
+
+Implementari existente
+-----------------------
+[1] Mozer, 1998; http://www.cs.colorado.edu/~mozer/house/
 
 
 
@@ -15,3 +26,5 @@ Ontologii + Context Aware
 2. http://www1.i2r.a-star.edu.sg/~tgu/gutao/paper/IJHWRS'05.pdf
 3. http://cost295.lboro.ac.uk/nacho/33.pdf
 4. http://www.ksl.stanford.edu/kst/what-is-an-ontology.html
+
+
