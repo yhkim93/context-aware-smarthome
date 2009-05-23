@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="http://amalia.eu-greenvalley.com/robots/smarthouse_upper.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://amalia.eu-greenvalley.com/robots/smarthouse_upper.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Human">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A person.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Individ"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Device">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Computational device - software and harware capabilities.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CompEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Actor">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The subject of an action in the context. Ex. the human adult John or the pet robot.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ContextEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="System">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ContextEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Physiological">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Location">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ContextEntity"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The position in the context as names of places. Ex. Bedroom.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="DeducedActivity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Activity"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Actor's activity can be infered. Ex. he eats.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Current">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The current state can have one to all of the affective, mental and physiological states.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ScheduledActivity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >When is his birthday he gives a party.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Activity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PhysicalObject">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ContextEntity"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Every object within the ontology. Ex. the table.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="NonHuman">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An animal or a robot.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Individ"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Neuron">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The ontological model of neuron's computer model.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NeuralNetwork"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Sensitivity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Measure  the Actor's tendency to get into a certain State when presented to a stimulus.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#NeuralNetwork">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Offers the support for representing weighted relations between the context elements</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Agent">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Software agent.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ContextEntity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >It contains different type of contexst elements</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Affective">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The emotional state.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Activity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >What an Actor is engaged in. Ex. sleeping.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ForbiddenActivity">
+    <rdfs:subClassOf rdf:resource="#Activity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OutdoorSpace">
+    <rdfs:subClassOf rdf:resource="#Location"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Outside the building</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Service">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Weight">
+    <rdfs:subClassOf rdf:resource="#Neuron"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >To evaluate the importance of an entrance.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Individ">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A human or non-human individ. Ex. a robot.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Human"/>
+          <owl:Class rdf:about="#NonHuman"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Actor"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Group">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A number of individuals</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Actor"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IndoorSpace">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Inside the building.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Location"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Network">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CompEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#CompEntity">
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Every entity in the context able to calculate.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Mental">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >What's in the Actor's mind :)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#State">
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Describes the general situation of an Actor. Ex. happy, hungry, interested.</rdfs:comment>
+  </owl:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 506)  http://protege.stanford.edu -->
