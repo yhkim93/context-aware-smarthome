@@ -1,0 +1,130 @@
+<!--
+	<H3>TranslationAgent: Lesson F1.</H3>
+	Using internal events to broadcast information.
+	<H4>Explanation</H4>
+	The agent creates a gui and visualizes issued
+	translation requests.
+-->
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="DeviceManager"
+	package="DeviceLayer">
+
+	<imports>
+		<import>java.util.logging.*</import>
+		<import>java.util.Vector</import>
+		<import>jadex.adapter.fipa.*</import>
+		<import>jadex.util.*</import>
+		<import>jadex.runtime.*</import>
+		<import>jadex.runtime.impl.*</import>
+		<import>jadex.planlib.*</import>
+		<import>ontology.lowerOntology.*</import>
+		
+	</imports>
+
+	<capabilities>
+		<capability name="amscap" file="jadex.planlib.AMS" />
+		<capability name="dfcap" file="jadex.planlib.DF"/>
+	</capabilities>
+	
+
+	<beliefs>
+		 <belief name="deviceType" exported="true" class="Vector">
+                    <fact>new Vector()</fact>
+     	 </belief>
+				
+	</beliefs>
+
+
+	<goals>
+		<achievegoalref name="ams_create_agent">
+        	<concrete ref="amscap.ams_create_agent" />
+    	</achievegoalref>
+    	     <!-- Used for registering the dealer at the df. -->
+        <achievegoalref name="df_register">
+             <concrete ref="dfcap.df_register"/>
+        </achievegoalref>
+                
+                <!-- Used for deregistering the dealer at the df. -->
+         <achievegoalref name="df_deregister">
+                <concrete ref="dfcap.df_deregister"/>
+         </achievegoalref>
+	</goals>
+
+	<plans>
+		<plan name="getDeviceTypes">
+			<body class="GetDevicesTypesPlan"/>
+		</plan>
+	</plans>
+
+	<events>
+		
+		<messageevent name="requestContextData" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>
+           <!-- <parameter name="language" class="String" direction="fixed">
+       		     <value>SFipa.NUGGETS_XML</value>
+            </parameter>
+            <parameter name="ontology" class="String" direction="fixed">
+            	<value>ontology.lowerOntology.SmartHouse.ONTOLOGY_NAME</value>
+            </parameter>
+            -->
+       </messageevent>
+       
+       <messageevent name="context_info" direction="send_receive" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>
+           
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+           <!--  <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+             </parameter>
+             
+            -->
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>java.util.Vector.class</value>
+             </parameter>
+             
+            
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>ontology.lowerOntology.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             
+        </messageevent>
+        
+        
+		
+				
+		</events>
+
+	<properties>
+ 		<!-- Only log outputs >= level are printed. -->
+       <property name="logging.level">Level.INFO</property>
+ 		<!-- The default parent handler prints out log messages on the console. -->
+       <property name="logging.useParentHandlers">true</property>
+    </properties>
+
+	<configurations>
+		<configuration name="default">
+			
+			<plans>
+				<initialplan ref="getDeviceTypes"/>
+			</plans>
+		</configuration>
+	</configurations>
+
+</agent>
+

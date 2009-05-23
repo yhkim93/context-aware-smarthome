@@ -1,0 +1,446 @@
+; Mon Jun 02 21:25:36 EEST 2008
+; 
+;+ (version "3.4")
+;+ (build "Build 126")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot timestamp
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot deviceStatus
+		(type SYMBOL)
+		(allowed-values ON OFF)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot instanceName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot location
+;+		(comment "The location of the object.")
+		(type INSTANCE)
+;+		(allowed-classes Location)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot target
+		(type INSTANCE)
+;+		(allowed-classes Target)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot y
+;+		(comment "The y-coordinate.")
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot x
+;+		(comment "The x-coordinate.")
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot sensorValue
+		(type SYMBOL)
+		(allowed-values LOW MEDIUM HIGH)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot hasLocation
+		(type INSTANCE)
+;+		(allowed-classes Location)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass RequestProduction
+	(is-a AgentAction)
+	(role concrete)
+	(single-slot target
+		(type INSTANCE)
+;+		(allowed-classes Target)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass RequestCarry
+	(is-a AgentAction)
+	(role concrete)
+	(single-slot target
+		(type INSTANCE)
+;+		(allowed-classes Target)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass LocationObject
+	(is-a USER)
+	(role abstract)
+	(single-slot location
+;+		(comment "The location of the object.")
+		(type INSTANCE)
+;+		(allowed-classes Location)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Target
+	(is-a LocationObject)
+	(role concrete))
+
+(defclass ContextEntity
+	(is-a USER)
+	(role concrete)
+	(single-slot instanceName
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Activity
+	(is-a ContextEntity)
+	(role concrete)
+	(single-slot hasLocation
+		(type INSTANCE)
+;+		(allowed-classes Location)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass ScheduledActivity
+	(is-a Activity)
+	(role concrete))
+
+(defclass DeducedActivity
+	(is-a Activity)
+	(role concrete))
+
+(defclass WorkingActivity
+	(is-a Activity)
+	(role concrete))
+
+(defclass EntertainmentActivity
+	(is-a Activity)
+	(role concrete))
+
+(defclass Actor
+	(is-a ContextEntity)
+	(role concrete)
+	(single-slot hasLocation
+		(type INSTANCE)
+;+		(allowed-classes Location)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Group
+	(is-a Actor)
+	(role concrete))
+
+(defclass Family
+	(is-a Group)
+	(role concrete))
+
+(defclass Individ
+	(is-a Actor)
+	(role concrete))
+
+(defclass Human
+	(is-a Individ)
+	(role concrete))
+
+(defclass NonHuman
+	(is-a Individ)
+	(role concrete))
+
+(defclass Location "A location on the world map given by x- and y-coordinates."
+	(is-a ContextEntity)
+	(role concrete))
+
+(defclass IndoorSpace
+	(is-a Location)
+	(role concrete))
+
+(defclass Room
+	(is-a IndoorSpace)
+	(role concrete))
+
+(defclass Bathroom
+	(is-a Room)
+	(role concrete))
+
+(defclass Bedroom
+	(is-a Room)
+	(role concrete))
+
+(defclass ChildrenRoom
+	(is-a Room)
+	(role concrete))
+
+(defclass Kitchen
+	(is-a Room)
+	(role concrete))
+
+(defclass LivingRoom
+	(is-a Room)
+	(role concrete))
+
+(defclass Wall
+	(is-a IndoorSpace)
+	(role concrete))
+
+(defclass Corridor
+	(is-a IndoorSpace)
+	(role concrete))
+
+(defclass Garage
+	(is-a IndoorSpace)
+	(role concrete))
+
+(defclass OutdoorSpace
+	(is-a Location)
+	(role concrete))
+
+(defclass PhysicalObject
+	(is-a ContextEntity)
+	(role concrete)
+	(single-slot hasLocation
+		(type INSTANCE)
+;+		(allowed-classes Location)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Device
+	(is-a PhysicalObject)
+	(role concrete)
+	(single-slot deviceStatus
+		(type SYMBOL)
+		(allowed-values ON OFF)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot timestamp
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass AudioAndVideo
+	(is-a Device)
+	(role concrete))
+
+(defclass CDPlayer
+	(is-a AudioAndVideo)
+	(role concrete))
+
+(defclass BodyCare
+	(is-a Device)
+	(role concrete))
+
+(defclass CurlingIron
+	(is-a BodyCare)
+	(role concrete))
+
+(defclass HairDryer
+	(is-a BodyCare)
+	(role concrete))
+
+(defclass Jacuzzi
+	(is-a BodyCare)
+	(role concrete))
+
+(defclass CleaningDevice
+	(is-a Device)
+	(role concrete))
+
+(defclass Dishwasher
+	(is-a CleaningDevice)
+	(role concrete))
+
+(defclass Dryer
+	(is-a CleaningDevice)
+	(role concrete))
+
+(defclass VacuumCleaner
+	(is-a CleaningDevice)
+	(role concrete))
+
+(defclass WashingMachine
+	(is-a CleaningDevice)
+	(role concrete))
+
+(defclass CommunicationDevice
+	(is-a Device)
+	(role concrete))
+
+(defclass MobilePhone
+	(is-a CommunicationDevice)
+	(role concrete))
+
+(defclass ComputingDevice
+	(is-a Device)
+	(role concrete))
+
+(defclass PC
+	(is-a ComputingDevice)
+	(role concrete))
+
+(defclass PDA
+	(is-a ComputingDevice)
+	(role concrete))
+
+(defclass EntertainmentDevice
+	(is-a Device)
+	(role concrete))
+
+(defclass ToyCar
+	(is-a EntertainmentDevice)
+	(role concrete))
+
+(defclass HouseholdDevice
+	(is-a Device)
+	(role concrete))
+
+(defclass AirConditioning
+	(is-a HouseholdDevice)
+	(role concrete))
+
+(defclass CentralHeating
+	(is-a HouseholdDevice)
+	(role concrete))
+
+(defclass Clock
+	(is-a HouseholdDevice)
+	(role concrete))
+
+(defclass DoorBell
+	(is-a HouseholdDevice)
+	(role concrete))
+
+(defclass Fan
+	(is-a HouseholdDevice)
+	(role concrete))
+
+(defclass KitchenDevice
+	(is-a Device)
+	(role concrete))
+
+(defclass CoffeeMachine
+	(is-a KitchenDevice)
+	(role concrete))
+
+(defclass Cooker
+	(is-a KitchenDevice)
+	(role concrete))
+
+(defclass ElectricalCooker
+	(is-a Cooker)
+	(role concrete))
+
+(defclass GasCooker
+	(is-a Cooker)
+	(role concrete))
+
+(defclass Fridge
+	(is-a KitchenDevice)
+	(role concrete))
+
+(defclass Oven
+	(is-a KitchenDevice)
+	(role concrete))
+
+(defclass ElectricalOven
+	(is-a Oven)
+	(role concrete))
+
+(defclass Microwave
+	(is-a Oven)
+	(role concrete))
+
+(defclass TransportationDevice
+	(is-a Device)
+	(role concrete))
+
+(defclass Car
+	(is-a TransportationDevice)
+	(role concrete))
+
+(defclass Motocycle
+	(is-a TransportationDevice)
+	(role concrete))
+
+(defclass Sensor
+	(is-a Device)
+	(role concrete)
+	(single-slot sensorValue
+		(type SYMBOL)
+		(allowed-values LOW MEDIUM HIGH)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass LightSensor
+	(is-a Sensor)
+	(role concrete))
+
+(defclass TemperatureSensor
+	(is-a Sensor)
+	(role concrete))
+
+(defclass HumiditySensor
+	(is-a Sensor)
+	(role concrete))
+
+(defclass Product
+	(is-a PhysicalObject)
+	(role concrete))
+
+(defclass Consumable
+	(is-a Product)
+	(role concrete))
+
+(defclass Drinks
+	(is-a Consumable)
+	(role concrete))
+
+(defclass Food
+	(is-a Consumable)
+	(role concrete))
+
+(defclass FixedObject
+	(is-a Product)
+	(role concrete))
+
+(defclass Curtain
+	(is-a FixedObject)
+	(role concrete))
+
+(defclass Door
+	(is-a FixedObject)
+	(role concrete))
+
+(defclass Radiator
+	(is-a FixedObject)
+	(role concrete))
+
+(defclass Window
+	(is-a FixedObject)
+	(role concrete))
+
+(defclass Furniture
+	(is-a Product)
+	(role concrete))
+
+(defclass Bed
+	(is-a Furniture)
+	(role concrete))
+
+(defclass Chair
+	(is-a Furniture)
+	(role concrete))
+
+(defclass Table
+	(is-a Furniture)
+	(role concrete))
+
+(defclass Toys
+	(is-a Product)
+	(role concrete))
+
+(defclass Box
+	(is-a Toys)
+	(role concrete))
+
+(defclass Toy
+	(is-a Toys)
+	(role concrete))
