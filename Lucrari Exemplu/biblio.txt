@@ -1,0 +1,87 @@
+X. BIBLIOGRAPHY
+[1] Ronny Haryanto, Context Awareness in Smart Homes to Support Independent Living, Master of Science in Internetworking, University of Technology, Sydney, 2005.
+[2] Dey, Anind K. & Gregory D. Abowd, Towards a Better Understanding of Context and ContextAwareness”, GVU Technical Report GIT-GVU-00-18, GIT, 1999.
+[3] Held Albert, Sven Buchholz & Alexander Schill, Modeling of Context Information for Pervasive Computing Applications”, Sixth World Multiconference on Systemics, Cybernetics and Informatics, SCI2002, Orlando, July 2002.
+[4] Harter Andy, Andy Hopper, Pete Steggles, Andy Ward, Paul Webster, The Anatomy of a Context-Aware Application, Wireless Networks 1 (2001) 116, 2001.
+[5] O. Bucur, P. Beaune, O. Boissier, Steps towards making contextualized decisions: How to Do What You Can, with What You Have, Where You Are, Lecture Notes in Computer Science, vol. 3946, 2006, p. 62-85, Septembre 2005.
+[6] Luca Buriano, Marco Marchetti, Francesca Carmagnola, Federica Cena, Cristina Gena, Ilaria Torre, The Role of Ontologies in Context-Aware Recommender Systems, In The Proceedings of MOSO, 2006.
+[7] Ghita Kouadri Most´efaoui, Jacques Pasquier-Rocha, Patrick Br´ezillon Context-Aware Computing: A Guide for the Pervasive Computing Community, Pervasive Services, ICPS 2004 IEEE/ACS International Conference, July 2004.
+[8] Kavi Kumar Khedo, Context-Aware Systems for Mobile and Ubiquitous Networks, International Conference on Systems and International Conference on Mobile Communications and Learning Technologies, 2006.
+[9] Thomas Strang Claudia LinnhoffPopien, A Context Modeling Survey, Workshop on Advanced Context Modelling, Reasoning and Management as part of UbiComp, 2004.
+[10] Matthias Baldauf, Schahram Dustdar, Florian Rosenberg, A survey on context-aware systems, International Journal of Ad Hoc and Ubiquitous Computing, Volume 2, Issue 4, June 2007
+[11] O. Gassmann, H. Meixner, Sensors in Intelligent Buildings, Wiley-VCH Verlag GmbH, 2001.
+[12] Leijdekkers, Peter & Valerie Gay, Personalized Service and Network Adaptation for Smart Devices.” IEEE Asia Pacific Conference on Communications, Perth, Australia, October 2005.
+Technical University of Cluj-Napoca 99
+Bibliography
+[13] Tao Gua, Hung Keng Punga, Da Qing Zhangb, A service-oriented middleware for building context-aware services, Journal of Network and Computer Applications archive Volume 28 , Issue 1, January 2005.
+[14] Chen, Guanling, David Kotz, A Survey of ContextAware Mobile Computing Research, Dartmouth Computer Science, Technical Report, 2000.
+[15] Chen, H., An Intelligent Broker Architecture for Pervasive Context-Aware Systems, PhD Thesis, University of Maryland, Baltimore, 2004.
+[16] Dey, Anind K., Raffay Hamid, Chris Beckmann, Ian Li, Daniel Hsu, A CAPpella: Programming by Demonstration of ContextAware Applications, Proceedings of the SIGCHI conference on Human factors in computing systems, 2004.
+[17] Bardram, Jakob E. The Java Context Awareness Framework (JCAF) A Service Infrastructure and Programming Framework for ContextAware Applications,Third International Conference on Pervasive Computing, vol. 3468 of Lecture Notes in Computer Science, Munich, Germany, May 2005.
+[18] Mayrhofer Rene, An Architecture for Context Prediction, PhD Thesis,University Linz, Austria, 2004.
+[19] Gu T., Wang X. H., Pung H. K., Zhang D. Q., Ontology Based Context Modeling and Reasoning using OWL, San Diego, USA, January 2004.
+[20] Chen H., Finin T., Joshi, A. Using OWL in a Pervasive Computing Broker. In Proceedings of Workshop on Ontologies in Open Agent Systems (AAMAS 2003), 2003.
+[21] Strang, T. and Linnhoff-Popien, C., A Context Modeling Survey, First International Workshop on Advanced Context Modelling, Reasoning and Management, UbiComp, 2004.
+[22] Salber, Daniel, Anind K. Dey & Gregory D. Abowd. 1999, The Context Toolkit: Aiding then Development of ContextEnabled Applications, Pittsburgh, USA, May 1999.
+[23] Fahy, Clarke, CASS – a middleware for mobile context-aware applications, Workshop on Context Awareness, MobiSys, 2004.
+[24] Gaëtan Rey, Joëlle Coutaz, James L. Crowley, The Contextor: a computational model for contextual information, WorkShop UBICOMP, 2002.
+[25] Harry Chen, Filip Perich, Tim Finin, Anupam Joshi, SOUPA: Standard Ontology for Ubiquitous and Pervasive Applications, Mobile and Ubiquitous Systems: Networking and Services, MOBIQUITOUS 2004, 2004.
+[26] Thomas Strang1, Claudia Linnho-Popien, Korbinian Frank, CoOL: A Context Ontology Language to enable Contextual Interoperability, In Distributed Applications and Interoperable Systems (DAIS2003), 2003.
+Technical University of Cluj-Napoca 100
+Bibliography
+[27] Zhongli Ding and Yun Peng, A Probabilistic Extension to Ontology Language OWL,
+Proceedings of the 37th Hawaii International Conference On System Sciences (HICSS-37), January 2004.
+[28] Tao Gu, Hung Keng Pung, Da Quing Zhang, A Bayesian approach for dealing with application specific contexts, Proceedings of the Second International Conference on Pervasive computing, Vienna, Austria, April 2004.
+[29] Binh An Truong, Young Koo Lee, Sung Young Lee, A Unified Context Model: Bringing Probabilistic Models to Context Ontology, EUC Workshops 2005, 2005.
+[30] Reto Krummenacher, Thomas Strang, Ontology-Based Context Modeling, In Third Workshop on Context Awareness for Proactive Systems (CAPS'07), 2007.
+[31] Md. Kamrul Hasan, Kim Anh, Lenin Mehedy, Young-Koo Lee, Sungyoung Lee, Conflict Resolution and Preference Learning in Ubiquitous Environment, Lecture Notes in Computer Science, Springer Berlin, Volume 4114/2006, 2006.
+[32] Reto Krummenacher, Holger Lausen, Thomas Strang, Jacek Kopeck´y Analyzing the Modeling of Context with Ontologies, In Int’l Workshop on Context-Awareness for Self-Managing Systems, May 2007.
+[33] Rem Collier, Gregory O’Hare,Terry Lowen, Colm Rooney, Beyond Prototyping in the Factory of Agents, 3rd Central and Eastern European Conference on Multiagent Systems (CEEMAS'03), Lecture Notes in Computer Science (LNCS), 2691, 2003.
+[34] N. Hristova, G.M.P. O’Hare & T. Lowen, Agent-based Ubiquitous Systems: 9 Lessons Learnt, In Proceedings of the System Support for Ubiquitous Computing Workshop at the Fifth Annual Conference on Ubiquitous Computing (UbiComp'2003) Seattle, Washington, 2003
+[35] B. De Carolis, G. Cozzolongo, S. Pizzutilo, and V.L. Plantamura, Agent-Based Home Simulation and Control, ISMIS 2005, Saratoga Springs, NY, USA, 2005.
+[36] Oana Bucur, Philippe Beaune, Olivier Boissier, Representing Context in an Agent Architecture for Context-Based Decision Making, proceedings of CRR'05 Workshop on Context Representation and Reasoning., 2005
+[37] Pavlos Moraitis, Nikolaos Spanoudakis, The Gaia2jade process for multi-agent systems development, Applied Artificial Intelligence 20(2-4): 251-273, 2006
+[38] J.K. Soldatos, Software Agents in Ubiquitous Computing: Benefits and the CHIL Case Study, invited paper in the Proceedings of the Software Agents in Information Systems and Industrial Applications (SAISIA 06’) workshop, Karlsruhe, Germany, February 2006.
+[39] Katia P. Sycara, Multiagent Systems,. AI Magazine 19(2): 79-92 (1998).
+Technical University of Cluj-Napoca 101
+Bibliography
+[40] Nguyen G., Dang T.T, Hluchy L., Laclavik M., Balogh Z., Budinska I. Agent platform evaluation and comparison, Jun 2002.
+[41] Anders Kofod-Petersen A Case-Based Approach to Realising Ambient Intelligence among Agents, Thesis for the degree doctor scientiarum Trondheim, May 2007.
+[42] Russell, Norvig Artificial Intelligence: a Modern Approach, Russell and Norvig 1995.
+[43] Fabio Bellifemine JADE Tutorial for beginners, mia.ece.uic.edu/~papers/MediaBot/JADEProgramming-tutorial-for-beginners.pdf
+[44] Hristova, N., O’Hare, G.M.P., Ad-me: A Context-Sensitive Advertising System, In
+Proc. of 3rd International Conference on Information Integration and Web-based Applications and Services (IIWAS), September 2001.
+[45] O'Hare, O'Grady, Gulliver's Genie: A Multi-Agent System for Ubiquitous and Intelligent Content Delivery, In Press, Computer Communications, Vol. 26, Issue 11, Elsevier Press. (2003) 1177-1187, 2003.
+[46] Keegan, S. & O'Hare, G.: EasiShop: Context sensitive Shopping for the Mobile User through Mobile Agent Technology, Proc. of 13th PIMRC, IEEE Press, Portugal, 2002.
+[47]Smith, D. C., A. Cypher and J. Spohrer (1994), KidSim: Programming Agents Without a Programming Language, Communications of the ACM, 37, 7, 55-67
+[48]Hayes-Roth, B. (1995), An Architecture for Adaptive Intelligent Systems, Artificial Intelligence:Special Issue on Agents and Interactivity, 72, 329-365.
+[49]Wooldridge, Michael and Nicholas R. Jennings (1995), "Agent Theories, Architectures, and Languages:a Survey" in Wooldridge and Jennings Eds., Intelligent Agents, Berlin: Springer-Verlag, 1-22.
+[50] Brustoloni, Jose C., Autonomous Agents: Characterization and Requirements, Carnegie Mellon Technical Report CMU-CS-91-204, 1991, Pittsburgh: Carnegie Mellon University
+[51] M.Coen, http://www.ai.mit.edu/people/sodabot/slideshow/total/P001.html
+[52] JESS: http://www.jessrules.com/
+[53] JADE Tutorial for beginners, organized by the JADE Board, http://jade.tilab.com
+[54]Rafal Leszczyna, Evaluation of Agent Platforms, 2004
+[55] Anders Liljedahl, Evaluation of Multi-Agent Platforms for Ubiquitous Computing, 2004
+[56] B. De Carolis, G. Cozzolongo, S. Pizzutilo, and V.L. Plantamura , Agent-Based Home Simulation and Control
+[57] J.K. Soldatos, Software Agents in Ubiquitous Computing: Benefits and the CHIL Case
+Study
+Technical University of Cluj-Napoca 102
+Bibliography
+[58] Fausto Giunchiglia ,John Mylopoulos, Anna Perini,The Tropos Software Development Methodology: Processes, Models and Diagrams
+[59]http://ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
+[60] [Rao and Georgeff, 1991] A. S. Rao and M. P. Georgeff. “Modeling rational agent
+within a BDI architecture”. In Proceedings of the Second International Conference on Principles of Knowledge Representation and Reasoning (KR’91), Cambridge, MA, 1991.
+[61] Sun Microsystems. Java Beans, http://java.sun.com/products/javabeans/
+[62] Protege http://protege.stanford.edu/
+[63] JADE (Java Agent DEvelopment Framework), http://jade.tilab.com/
+[64] Alexander Pokahr, Lars Braubach, Winfried Lamersdorf. Jadex: A BDI Reasoning Engine, Chapter of Multi-Agent Programming, Kluwer Book, Editors: R. Bordini, M. Dastani, J. Dix and A. Seghrouchni. http://www.cs.uu.nl/docs/vakken/map/jadex.pdf
+[65] Jadex User Guide, http://prdownloads.sourceforge.net/jadex/userguide-0.96.pdf
+[66] Jadex Tool Guide, http://prdownloads.sourceforge.net/jadex/toolguide-0.96.pdf
+[67] H. Sofia Pinto, Christoph Tempich, Steffen Staab, and York Sure. Diligent: Towards a fine-grained methodology for distributed, loosely-controlled and evolving engingeering of ontologies. In Ramon L´opez de M´antaras and Lorenza Saitta, editors, Proceedings of the 16th European Conference on Artificial Intelligence (ECAI 2004), August 22nd - 27th, pages 393–397, Valencia, Spain, IOS Press, 2004.
+[68] Kotis, K. and G.A. Vouros, Human-centered ontology engineering: The HCOME Methodology. Knowledge and Information Systems, 10(1): pp. 109-131, 2005.
+[69] Sure, Y., "Methodology, tools and case studies for ontology based knowledge management", http://www.ubka.uni-karlsruhe.de/cgi/bin/psview?document=2003/wiwi/6
+[70] Corcho, O., Fernandez-Lopez, M., Gomez-Perez, A., Methodologies, tools, and languages for building ontologies. Where is their meeting point?, Data and Knowledge engineering, 2003.
+[71] Uschold, M.: Where are the Semantics in the Semantic Web? AI Magazine, v.24, n.3, p.25-36, September 2003.
+[72] Jambalaya: http://www.thechiselgroup.org/jambalaya/
+[73] Gruninger, M., and Fox, M.S. (1995), Methodology for the Design and Evaluation of Ontologies, Workshop on Basic Ontological Issues in Knowledge Sharing, IJCAI-95, Montreal,1995.
+[74] M. Uschold and M. Grüninger: Ontologies: Principles, methods and applications. Knowledge Engineering Review, 11(2), 1996.

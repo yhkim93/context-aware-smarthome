@@ -1,0 +1,100 @@
+[01] K. Goldberg, S. Gentner, and C. Sutter et al., “The Mercury Project: A Feasibility Study for Internet Robotics,” IEEE Robotics and Automation Magazine, vol. 7, no. 1, 2000, pp. 35-40.
+
+[02] R. Simmons, “Xavier: An Autonomous Mobile Robot on the Web,” Proc. IEEE/RSJ Conf. on Intelligent Robots and Systems; Workshop on Web Robots, Victoria, B.C. Canada, Oct. 1998, URL: http://www.ri.cmu.edu/pub_files/pub1/simmons_reid_1999_1/simmons_reid_1999_1.pdf
+
+[03] P. Saucy and F. Mondada, “Open Access to a Mobile Robot on the Internet,” IEEE Robotics and Automation Magazine, vol. 7, no. 1, 2000, pp. 41-47.
+
+[04] M.R. Stein, “Interactive Internet Artistry,” IEEE Robotics and Automation Magazine, vol. 7, no. 1, 2000, pp. 28-32.
+
+[05] M. Choi, J. Hong, and H. Ju, “XML-Based Network Management for IP Networks,” ETRI J., vol. 25, no. 6, Dec. 2003, pp. 445-463.
+
+[06] Young-Guk Ha, Joo-Chan Sohn, Young-Jo Cho, and Hyunsoo Yoon, „Towards a Ubiquitous Robotic Companion: Design and Implementation of Ubiquitous Robotic Service Framework”, Sept. 15, 2005
+
+[07] D. Wang, X. Ma, and X. Dai, “Web-Based Robotic Control System with Flexible Framework,” Proc. IEEE Int’l Conf. on Robotics and Automation (ICRA 2004), New Orleans, LA, Apr. 2004, pp. 3351 - 3356.
+
+[08] W3C Recommendation, Web Services Architecture, W3C, 2004, URL: http://www.w3c.org/TR/ws-arch/ 
+
+[09]  W3C Recommendation, RDF Primer, W3C, 2004, URL:http://www.w3c.org/TR/rdf-primer/.
+
+[10] L. Miller, A. Seaborne, and A. Reggiori, “Three Implementations of SquishQL, a Simple RDF Query Language,” Proc. 1st Int’l Semantic Web Conf. (ISWC 2002), LNCS 2342, Springer-Verlag, 2002, pp. 423-435.
+
+ [11] Z. Zenn Bien. Human-friendly Man-Machine Interaction in Smart Home. Keynote speech at the 3rd International Conference On Smart homes and health Telematic, Sherbrooke, Québec, Canada, July 4-6, 2005.
+
+[12] A. Helal, W. Mann, H. Elzabadani, J. King, Y. Kaddourah and E. Jansen, "Gator Tech Smart House: A Programmable Pervasive Space", IEEE Computer magazine, March 2005, pp. 64-74
+
+[13] Mohamed Ali Feki, Stéphane Renouard, Bessam Abdulrazak, Gérard Chollet, Mounir Mokhtari. Coupling Context Awareness and Multimodality in Smart Homes Concept. The 10th International Conference on Computers Helping People with Special Needs. Lecture Notes in Computer Science 3118 Springer 2004, ISBN 3-540-22334-7. Paris, France, July, 2004.
+
+[14]Kensuke Murai and Akira Okubo, “Government Policy for Next Generation Robots” in Journal of the Robotics Society of Japan, Vol. 26. No.5, 2008.
+
+[15] Ghita Kouadri Most´efaoui, Jacques Pasquier-Rocha, Patrick Br´ezillon „Context-Aware Computing: A Guide for the Pervasive Computing Community, Pervasive Services”, ICPS 2004 IEEE/ACS International Conference, July 2004.
+
+[16] Dey Anind K. & Gregory D. Abowd, „Towards a Better Understanding of Context and ContextAwareness”, GVU Technical Report GIT-GVU-00-18, GIT, 1999.
+
+[17] Ay Feruzan, „Context Modeling and Reasoning using Ontologies”, University of Technology Berlin, Berlin , July 2007.
+
+[18] Ronny Haryanto, „Context Awareness in Smart Homes to Support Independent Living”, Master of Science in Internetworking, University of Technology, Sydney, 2005
+
+[19]  Research Center for Educational Technology, Ubiquitous Computing – Where it came from, RCET, 2006, URL: http://www.rcet.org/ubicomp/what.htm
+
+[20] Boehm Barry, „Ubiquitous Computing”, Center for Systems and Software Engineering, University of Southern California, 2007, URL: http://sunset.usc.edu/classes/cs599_2002/Week3_c.ppt
+
+[21] Tao Gua, Hung Keng Punga, Da Qing Zhangb,” A service-oriented middleware for building context-aware services”, Journal of Network and Computer Applications, archive Volume 28 , Issue 1, January 2005.
+
+[22] Seng Loke , „Context-aware pervasive systems: architectures for a new breed of applications”, CRC Press, 2006.
+
+[23] T. Wahl: “Konzeption und Realisierung einer Ontologie zur Modellierung und Ableitung von Geschäftsprozessen“, TU Berlin, 2005
+
+[24] J. Voß: „Begriffssysteme – Ein Vergleich verschiedener Arten von Begriffssystemen und Entwurf des integrierenden Datenmodells“, HU, Berlin, 2004
+
+[25] M. Gruninger, and J. Lee: „Ontology – Applications and Design”, in Communications of the ACM, 2002
+
+[26] M. K. Smith, C. Welthy, and D. L. McGuinness: “OWL Web Ontology Language Guide”, URL: http://www.w3.org/TR/owl-guide
+
+[27] S. Bechhofer, F. v. Harmelen, J. Hendler, I. Horrocks, et al.: „OWL Web Ontology Language Reference”, URL: http://www.w3.org/TR/owl-ref
+
+[28] T. R. Gruber: “Ontolingua: A Mechanism to Support Portable Ontologies”, Stanford University, 1992
+
+[29] R. M. MacGregor: “Inside the LOOM description classifier”, in ACM SIGART Bulletin, 1991
+
+[30] T. Berners-Lee, J. Hendler, et al.: “The Semantic Web“,  Scientific American, 2001
+
+[31] Bray, T., J. Paoli, et al.: Extensible Markup Language (XML) 1.0 (Third Edition) - W3C Recommendation. URL: http://www.w3.org/TR/2004/RECxml-20040204, 2004.
+
+[32] X. H. Wang, T. Gu, D. Q. Zhang, and H. K. Pung: „Ontology Based Context Modeling and Reasoning using OWL”, Pervasive Computing and Communications Workshops, March 2004. 
+
+[33] Daqing Zhang, Tao Gu, Xiaohang Wang: „Enabling Context-Aware Smart Home with Semantic Web Technologies”, Institute for Infocomm Research, June 2005.
+
+[34] Daqing Zhang, Xiaohang Wang: „OSGi Based Service Infrastructure for Context Aware
+Connected Home.” Proceeding of 1st International Conference On Smart Homes and Health Telematics (ICOST2003), IOS Press, Paris, France, 2007.
+
+[35] T. Gu, H. K. Pung, D. Q. Zhang, “Towards an OSGi-Based Infrastructure for Context- Aware Applications in Smart Homes”, IEEE Pervasive Computing, Vol. 3, Issue 4, 2004.
+[36] Bardram, Jakob E. The Java Context Awareness Framework (JCAF) A Service Infrastructure and Programming Framework for ContextAware Applications,Third International Conference on Pervasive Computing, vol. 3468 of Lecture Notes in Computer Science, Munich, Germany, May 2005.
+
+[37] Mayrhofer Rene, An Architecture for Context Prediction, PhD Thesis,University Linz, Austria, 2004.
+
+[38] Wooldridge, Michael and Nicholas R. Jennings (1995), "Agent Theories, Architectures, and Languages:a Survey", Wooldridge and Jennings Eds., Intelligent Agents, Berlin: Springer-Verlag, 1-22.
+
+[39] Russell, Norvig, „Artificial Intelligence: a Modern Approach”, Russell and Norvig, 1995.
+
+[40] Rem Collier, Gregory O’Hare,Terry Lowen, Colm Rooney, Beyond Prototyping in the Factory of Agents, 3rd Central and Eastern European Conference on Multiagent Systems (CEEMAS'03), Lecture Notes in Computer Science (LNCS), 2691, 2003.
+
+[41] Kavi Kumar Khedo, „Context-Aware Systems for Mobile and Ubiquitous Networks”, International Conference on Systems and International Conference on Mobile Communications and Learning Technologies, 2006.
+
+[42] Salber, Daniel, Anind K. Dey & Gregory D. Abowd. 1999, „The Context Toolkit: Aiding then Development of ContextEnabled Applications”, Pittsburgh, USA, May 1999.
+
+[43] N. Hristova, G.M.P. O’Hare & T. Lowen, „Agent-based Ubiquitous Systems: 9 Lessons Learnt, In Proceedings of the System Support for Ubiquitous Computing Workshop” , Fifth Annual Conference on Ubiquitous Computing (UbiComp'2003) Seattle, Washington, 2003
+[44] Strang, T. and Linnhoff-Popien, C., „A Context Modeling Survey”, First International Workshop on Advanced Context Modelling, Reasoning and Management, UbiComp, 2004.
+
+[45] Chen, Guanling, David Kotz, „A Survey of Context-Aware Mobile Computing Research”, Dartmouth Computer Science, Technical Report, 2000.
+
+[46] Thomas Strang, Claudia Linnho-Popien, Korbinian Frank, „CoOL: A Context Ontology Language to enable Contextual Interoperability”, Distributed Applications and Interoperable Systems (DAIS2003), 2003.
+
+[47] M. K. Smith, C. Welthy, and D. L. McGuinness: “OWL Web Ontology Language Guide”, URL: http://www.w3.org/TR/owl-guide
+
+[48] Binh An Truong, Young Koo Lee, Sung Young Lee, A Unified Context Model: Bringing Probabilistic Models to Context Ontology, EUC Workshops 2005, 2005.
+
+[49] J. Pearl, "Belief Networks Revisited". In Artificial intelligence in perspective, pages 49-56,1994
+
+[50] Gregory D. Abowd and Anind K. Dey, "Towards a Better Understanding of Context and Context-Awareness", Workshop on the what, who, where, when and how of contextawareness at CHI 2000, April 2000.
+
+[51] Corcho, O., Fernandez-Lopez, M., Gomez-Perez, A., Methodologies, tools, and languages for building ontologies. Where is their meeting point?, Data and Knowledge engineering, 2003.
