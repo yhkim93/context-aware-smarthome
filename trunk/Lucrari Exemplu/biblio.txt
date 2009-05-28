@@ -1,4 +1,3 @@
-X. BIBLIOGRAPHY
 [1] Ronny Haryanto, Context Awareness in Smart Homes to Support Independent Living, Master of Science in Internetworking, University of Technology, Sydney, 2005.
 [2] Dey, Anind K. & Gregory D. Abowd, Towards a Better Understanding of Context and ContextAwareness”, GVU Technical Report GIT-GVU-00-18, GIT, 1999.
 [3] Held Albert, Sven Buchholz & Alexander Schill, Modeling of Context Information for Pervasive Computing Applications”, Sixth World Multiconference on Systemics, Cybernetics and Informatics, SCI2002, Orlando, July 2002.
@@ -11,8 +10,6 @@ X. BIBLIOGRAPHY
 [10] Matthias Baldauf, Schahram Dustdar, Florian Rosenberg, A survey on context-aware systems, International Journal of Ad Hoc and Ubiquitous Computing, Volume 2, Issue 4, June 2007
 [11] O. Gassmann, H. Meixner, Sensors in Intelligent Buildings, Wiley-VCH Verlag GmbH, 2001.
 [12] Leijdekkers, Peter & Valerie Gay, Personalized Service and Network Adaptation for Smart Devices.” IEEE Asia Pacific Conference on Communications, Perth, Australia, October 2005.
-Technical University of Cluj-Napoca 99
-Bibliography
 [13] Tao Gua, Hung Keng Punga, Da Qing Zhangb, A service-oriented middleware for building context-aware services, Journal of Network and Computer Applications archive Volume 28 , Issue 1, January 2005.
 [14] Chen, Guanling, David Kotz, A Survey of ContextAware Mobile Computing Research, Dartmouth Computer Science, Technical Report, 2000.
 [15] Chen, H., An Intelligent Broker Architecture for Pervasive Context-Aware Systems, PhD Thesis, University of Maryland, Baltimore, 2004.
@@ -27,8 +24,6 @@ Bibliography
 [24] Gaëtan Rey, Joëlle Coutaz, James L. Crowley, The Contextor: a computational model for contextual information, WorkShop UBICOMP, 2002.
 [25] Harry Chen, Filip Perich, Tim Finin, Anupam Joshi, SOUPA: Standard Ontology for Ubiquitous and Pervasive Applications, Mobile and Ubiquitous Systems: Networking and Services, MOBIQUITOUS 2004, 2004.
 [26] Thomas Strang1, Claudia Linnho-Popien, Korbinian Frank, CoOL: A Context Ontology Language to enable Contextual Interoperability, In Distributed Applications and Interoperable Systems (DAIS2003), 2003.
-Technical University of Cluj-Napoca 100
-Bibliography
 [27] Zhongli Ding and Yun Peng, A Probabilistic Extension to Ontology Language OWL,
 Proceedings of the 37th Hawaii International Conference On System Sciences (HICSS-37), January 2004.
 [28] Tao Gu, Hung Keng Pung, Da Quing Zhang, A Bayesian approach for dealing with application specific contexts, Proceedings of the Second International Conference on Pervasive computing, Vienna, Austria, April 2004.
@@ -43,8 +38,6 @@ Proceedings of the 37th Hawaii International Conference On System Sciences (HICS
 [37] Pavlos Moraitis, Nikolaos Spanoudakis, The Gaia2jade process for multi-agent systems development, Applied Artificial Intelligence 20(2-4): 251-273, 2006
 [38] J.K. Soldatos, Software Agents in Ubiquitous Computing: Benefits and the CHIL Case Study, invited paper in the Proceedings of the Software Agents in Information Systems and Industrial Applications (SAISIA 06’) workshop, Karlsruhe, Germany, February 2006.
 [39] Katia P. Sycara, Multiagent Systems,. AI Magazine 19(2): 79-92 (1998).
-Technical University of Cluj-Napoca 101
-Bibliography
 [40] Nguyen G., Dang T.T, Hluchy L., Laclavik M., Balogh Z., Budinska I. Agent platform evaluation and comparison, Jun 2002.
 [41] Anders Kofod-Petersen A Case-Based Approach to Realising Ambient Intelligence among Agents, Thesis for the degree doctor scientiarum Trondheim, May 2007.
 [42] Russell, Norvig Artificial Intelligence: a Modern Approach, Russell and Norvig 1995.
@@ -65,8 +58,6 @@ Proc. of 3rd International Conference on Information Integration and Web-based A
 [56] B. De Carolis, G. Cozzolongo, S. Pizzutilo, and V.L. Plantamura , Agent-Based Home Simulation and Control
 [57] J.K. Soldatos, Software Agents in Ubiquitous Computing: Benefits and the CHIL Case
 Study
-Technical University of Cluj-Napoca 102
-Bibliography
 [58] Fausto Giunchiglia ,John Mylopoulos, Anna Perini,The Tropos Software Development Methodology: Processes, Models and Diagrams
 [59]http://ksl.stanford.edu/people/dlm/papers/ontology101/ontology101-noy-mcguinness.html
 [60] [Rao and Georgeff, 1991] A. S. Rao and M. P. Georgeff. “Modeling rational agent
