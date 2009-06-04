@@ -51,19 +51,14 @@ Connected Home.” Proceeding of 1st International Conference On Smart Homes and H
 [50] Gregory D. Abowd and Anind K. Dey, "Towards a Better Understanding of Context and Context-Awareness", Workshop on the what, who, where, when and how of contextawareness at CHI 2000, April 2000.
 [51] Corcho, O., Fernandez-Lopez, M., Gomez-Perez, A., Methodologies, tools, and languages for building ontologies. Where is their meeting point?, Data and Knowledge engineering, 2003.
 [52] D.B. Lenat, R.V. Guha, „Building Large Knowledge-Based Systems: Representation and Inference in the Cyc Project”, Addison-Wesley, Boston, 1990
-
 [53] A. Bernaras, I. Laresgoiti, J. Corera, „Building and reusing ontologies for electrical network applications”, Proc. European Conference on Artificial Intelligence (ECAI_96), Budapest, Hungary, 1996, pp. 298–302.
-
 [54] B. Swartout, P. Ramesh, K. Knight, T. Russ, „Toward Distributed Use of Large-Scale Ontologies”, AAAI Symposium on Ontological Engineering, Stanford, 1997.
-
 [55] M. Fernandez-Lopez, A. Gomez-Perez, A. Pazos-Sierra, J. Pazos-Sierra, „Building a chemical ontology using METHONTOLOGY and the ontology design environment”, IEEE Intelligent Systems & their applications, 1999, p. 37–46.
-
 [56] Nguyen G., Dang T.T, Hluchy L., Laclavik M., Balogh Z., Budinska I. Agent platform evaluation and comparison, Jun 2002.
-
 [57] http://www.fipa.org/specifications/index.html
-
 [58] FIPA-OS http://fipa-os.sourceforge.net/
-
 [59] JADE, Tutorial for beginners, organized by the JADE Board, http://jade.tilab.com
 [60] ***,JACK http://www.agent-software.com/
 [61] Zeus – BT Intelligent Agent Research http://www.opensource.org/
+[62] Jadex User Guide, http://prdownloads.sourceforge.net/jadex/userguide-0.96.pdf
+[63] Jadex Tool Guide, http://prdownloads.sourceforge.net/jadex/toolguide-0.96.pdf
