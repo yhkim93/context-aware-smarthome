@@ -1,0 +1,1472 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1207603095.owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1207603095.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Plan"/>
+  <owl:Class rdf:ID="Wall">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="IndoorSpace"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PetRobot">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Robot"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Jacuzzi">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="BodyCare"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Sensor">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Location"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Restlessness">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Human">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Individ"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Furniture">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Product"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SupervisorRobot">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Robot"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Door">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="FixedObject"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Room">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IndoorSpace"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ScheduledMeeting">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ScheduledActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Supervising">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="DeducedActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cooker">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="KitchenDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Consumable">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Product"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="OutdoorSpace">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Location"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Chair">
+    <rdfs:subClassOf rdf:resource="#Furniture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Hall">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Activity">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ContextEntity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HairIron">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#BodyCare"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TV">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="EntertainmentDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TransportationDevice">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Device"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Drinks">
+    <rdfs:subClassOf rdf:resource="#Consumable"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Clock">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="HouseholdDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Fan">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HouseholdDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Time">
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sadness">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Toys">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Product"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PC">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ComputingDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Robot">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This represents the robots for the smarhouse.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="NonHuman"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Location">
+    <owl:disjointWith rdf:resource="#Sensor"/>
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Fridge">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#KitchenDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Box">
+    <rdfs:subClassOf rdf:resource="#Toys"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Doorbell">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HouseholdDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PhysicalObject">
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="WashingMachine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CleaningDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Curtain">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#FixedObject"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Device">
+    <rdfs:subClassOf rdf:resource="#PhysicalObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MissionRobot">
+    <rdfs:subClassOf rdf:resource="#Robot"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bedroom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:about="#BodyCare">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Disgust">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Reading">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeducedActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#NonHuman">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Individ"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CoffeeMachine">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#KitchenDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#EntertainmentDevice">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Table">
+    <rdfs:subClassOf rdf:resource="#Furniture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HumiditySensor">
+    <rdfs:subClassOf rdf:resource="#Sensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="LightSensor"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TemperatureSensor"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="VacuumCleaner">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CleaningDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ScheduledParty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ScheduledActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Individ">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Actor"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Entertaining">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is a robot activity. Pet Robots entertains the members of the smarthouse.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeducedActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="WatchingTV">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeducedActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MobilePhone">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="CommunicationDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ChildrenRoom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Toy">
+    <rdfs:subClassOf rdf:resource="#Toys"/>
+  </owl:Class>
+  <owl:Class rdf:about="#CommunicationDevice">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Surprise">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#LightSensor">
+    <owl:disjointWith rdf:resource="#HumiditySensor"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TemperatureSensor"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Sensor"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Weather">
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AirConditioning">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#HouseholdDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#TemperatureSensor">
+    <owl:disjointWith rdf:resource="#LightSensor"/>
+    <owl:disjointWith rdf:resource="#HumiditySensor"/>
+    <rdfs:subClassOf rdf:resource="#Sensor"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dryer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#CleaningDevice"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Food">
+    <rdfs:subClassOf rdf:resource="#Consumable"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Actor">
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Product">
+    <rdfs:subClassOf rdf:resource="#PhysicalObject"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Motocycle">
+    <rdfs:subClassOf rdf:resource="#TransportationDevice"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Group">
+    <rdfs:subClassOf rdf:resource="#Actor"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ComputingDevice">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bed">
+    <rdfs:subClassOf rdf:resource="#Furniture"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Joyfulness">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#ScheduledActivity">
+    <rdfs:subClassOf rdf:resource="#Activity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SystemTime">
+    <rdfs:subClassOf rdf:resource="#Time"/>
+  </owl:Class>
+  <owl:Class rdf:about="#KitchenDevice">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Corridor">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#IndoorSpace"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CurlingIron">
+    <rdfs:subClassOf rdf:resource="#BodyCare"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CDPlayer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AudioAndVideo"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HouseWork">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeducedActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NoiseSensor">
+    <rdfs:subClassOf rdf:resource="#Sensor"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Window">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#FixedObject"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cooking">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeducedActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ListeningToMusic">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#DeducedActivity"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Worry">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Kitchen">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:about="#DeducedActivity">
+    <rdfs:subClassOf rdf:resource="#Activity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ScheduledDinner">
+    <rdfs:subClassOf rdf:resource="#ScheduledActivity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#HouseholdDevice">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Showering">
+    <rdfs:subClassOf rdf:resource="#DeducedActivity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Boredom">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#CleaningDevice">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:about="#State">
+    <rdfs:subClassOf rdf:resource="#ContextEntity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Fear">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ToyCar">
+    <rdfs:subClassOf rdf:resource="#EntertainmentDevice"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CentralHeating">
+    <rdfs:subClassOf rdf:resource="#HouseholdDevice"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Family">
+    <rdfs:subClassOf rdf:resource="#Group"/>
+  </owl:Class>
+  <owl:Class rdf:ID="OfficeRoom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Bathroom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dishwasher">
+    <rdfs:subClassOf rdf:resource="#CleaningDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="#IndoorSpace">
+    <rdfs:subClassOf rdf:resource="#Location"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sleeping">
+    <rdfs:subClassOf rdf:resource="#DeducedActivity"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FixedObject">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AudioAndVideo">
+    <rdfs:subClassOf rdf:resource="#Device"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Garage">
+    <rdfs:subClassOf rdf:resource="#IndoorSpace"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Car">
+    <rdfs:subClassOf rdf:resource="#TransportationDevice"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LivingRoom">
+    <rdfs:subClassOf rdf:resource="#Room"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="inducesState">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Plan"/>
+          <owl:Class rdf:about="#Activity"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#State"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasState">
+    <rdfs:range rdf:resource="#State"/>
+    <rdfs:domain rdf:resource="#Human"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="doorLocation">
+    <rdfs:range rdf:resource="#Location"/>
+    <rdfs:domain rdf:resource="#Door"/>
+  </owl:ObjectProperty>
+  <owl:FunctionalProperty rdf:ID="deviceStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Device"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >OFF</rdf:first>
+          </rdf:rest>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >ON</rdf:first>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#SystemTime"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="instanceName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#ContextEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="StateIntensity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#State"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >1</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >3</rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:rest>
+          </rdf:rest>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasLocation">
+    <rdfs:range rdf:resource="#Location"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#PhysicalObject"/>
+          <owl:Class rdf:about="#Actor"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasActivity">
+    <rdfs:range rdf:resource="#Activity"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Individ"/>
+          <owl:Class rdf:about="#Robot"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="objectStatus">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >OPEN</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >CLOSED</rdf:first>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:rest>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="#FixedObject"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="time">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#SystemTime"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="sensorValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Sensor"/>
+    <rdfs:range>
+      <owl:DataRange>
+        <owl:oneOf rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >LOW</rdf:first>
+          <rdf:rest rdf:parseType="Resource">
+            <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >MEDIUM</rdf:first>
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+              >HIGH</rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:rest>
+          </rdf:rest>
+        </owl:oneOf>
+      </owl:DataRange>
+    </rdfs:range>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="timestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Device"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Actor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="age">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Human"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <Clock rdf:ID="Clock_88">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >12313548465</timestamp>
+    <hasLocation>
+      <Bedroom rdf:ID="Bedroom1">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Bedroom1</instanceName>
+      </Bedroom>
+    </hasLocation>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clock_88</instanceName>
+  </Clock>
+  <Supervising rdf:ID="SupervisingRobots">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >SupervisingRobots</instanceName>
+    <inducesState>
+      <Restlessness rdf:ID="Restlessness_14">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >The Restleness provked by supervisor robot. It keeps the other robots in control.</rdfs:comment>
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SupervisorRestleness</instanceName>
+      </Restlessness>
+    </inducesState>
+  </Supervising>
+  <Toy rdf:ID="Toy_130"/>
+  <CoffeeMachine rdf:ID="CoffeeMachine_91">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CoffeeMachine_91</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >65465456798</timestamp>
+    <hasLocation>
+      <Kitchen rdf:ID="Kitchen1">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Kitchen1</instanceName>
+      </Kitchen>
+    </hasLocation>
+  </CoffeeMachine>
+  <Human rdf:ID="Mary">
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</age>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mary</name>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mary</instanceName>
+    <hasActivity>
+      <Cooking rdf:ID="Cooking1"/>
+    </hasActivity>
+    <hasState>
+      <Joyfulness rdf:ID="Joyful3">
+        <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >3</StateIntensity>
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Joyfull3</instanceName>
+      </Joyfulness>
+    </hasState>
+  </Human>
+  <Window rdf:ID="Living_Windows">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Living_Windows</instanceName>
+    <hasLocation>
+      <LivingRoom rdf:ID="LivingRoom1">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >LivingRoom1</instanceName>
+      </LivingRoom>
+    </hasLocation>
+  </Window>
+  <Curtain rdf:ID="Curtain_105"/>
+  <Window rdf:ID="Bathroom_3_Windows">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <hasLocation>
+      <Bathroom rdf:ID="Bathroom3"/>
+    </hasLocation>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bathroom_3_Windows</instanceName>
+  </Window>
+  <ChildrenRoom rdf:ID="LittleChildrenRoom">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LittleChildrenRoom</instanceName>
+  </ChildrenRoom>
+  <CentralHeating rdf:ID="CentralHeating_87">
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CentralHeating_87</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1234465654</timestamp>
+  </CentralHeating>
+  <Doorbell rdf:ID="Doorbell_89">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Doorbell_89</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5645467889</timestamp>
+    <hasLocation>
+      <Corridor rdf:ID="Corridor_2">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Corridor_2</instanceName>
+      </Corridor>
+    </hasLocation>
+  </Doorbell>
+  <HumiditySensor rdf:ID="HumiditySensor2">
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDIUM</sensorValue>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4555555</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >HumiditySensor2</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+  </HumiditySensor>
+  <Door rdf:ID="Little-Child_Door">
+    <hasLocation rdf:resource="#LittleChildrenRoom"/>
+    <doorLocation rdf:resource="#LittleChildrenRoom"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Little-Child_Door</instanceName>
+  </Door>
+  <CDPlayer rdf:ID="CDPlayer_73">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >545654656565</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CDPlayer_73</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+  </CDPlayer>
+  <Chair rdf:ID="Chair_120"/>
+  <Bed rdf:ID="Bed_117"/>
+  <Door rdf:ID="Main_Door">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Main_Door</instanceName>
+    <doorLocation>
+      <Hall rdf:ID="Hall1">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Hall1</instanceName>
+      </Hall>
+    </doorLocation>
+    <hasLocation rdf:resource="#Hall1"/>
+  </Door>
+  <CurlingIron rdf:ID="CurlingIron_74">
+    <hasLocation rdf:resource="#Bedroom1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >54457899878897897</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CurlingIron_74</instanceName>
+  </CurlingIron>
+  <Weather rdf:ID="Warm"/>
+  <LivingRoom rdf:ID="LivingRoom_15">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The living room where the supervisor robot perform it's activity.</rdfs:comment>
+  </LivingRoom>
+  <Entertaining rdf:ID="PlayWithChildren">
+    <inducesState>
+      <Joyfulness rdf:ID="Joyfulness_8">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >State induced by pet robot</rdfs:comment>
+      </Joyfulness>
+    </inducesState>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    ></rdfs:comment>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PlayWiithChildren</instanceName>
+  </Entertaining>
+  <TemperatureSensor rdf:ID="TemperatureSensor1">
+    <hasLocation>
+      <ChildrenRoom rdf:ID="BigChildrenRoom">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >BigChildrenRoom</instanceName>
+      </ChildrenRoom>
+    </hasLocation>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TemperatureSensor1</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >44587849398798658965875</timestamp>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDIUM</sensorValue>
+  </TemperatureSensor>
+  <HumiditySensor rdf:ID="HumiditySensor1">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >HumiditySensor1</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LOW</sensorValue>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4736383698</timestamp>
+    <hasLocation>
+      <Bathroom rdf:ID="Bathroom1">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Bathroom1</instanceName>
+      </Bathroom>
+    </hasLocation>
+  </HumiditySensor>
+  <HouseWork rdf:ID="HouseWork_5">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This housework represents transport boxes, or other objects between different points of the house</rdfs:comment>
+  </HouseWork>
+  <Door rdf:ID="Bathroom_1_Door">
+    <hasLocation rdf:resource="#Bathroom1"/>
+    <doorLocation rdf:resource="#Bathroom1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bathroom_1_Door</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OPEN</objectStatus>
+  </Door>
+  <Cooker rdf:ID="ElectricalCooker">
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >213111111111</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ElectricalCooker</instanceName>
+  </Cooker>
+  <Curtain rdf:ID="Curtain_102"/>
+  <AirConditioning rdf:ID="AirConditioning_86">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >13212341654</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >AirConditioning_86</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <hasLocation rdf:resource="#Kitchen1"/>
+  </AirConditioning>
+  <Entertaining rdf:ID="Entertaining_9">
+    <inducesState>
+      <Joyfulness rdf:ID="Joyfulness_10">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Pet_Joyfullness</instanceName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Joyfullness induced by pet robot</rdfs:comment>
+      </Joyfulness>
+    </inducesState>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is the entertaining instance produced by robot</rdfs:comment>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PetRobot_Entertaining</instanceName>
+  </Entertaining>
+  <Window rdf:ID="Bedroom_Windows">
+    <hasLocation rdf:resource="#Bedroom1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bedroom_Windows</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Window>
+  <ChildrenRoom rdf:ID="LittleJohn_Room">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >This is the LittleJohn Room</rdfs:comment>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LittleJohn_Room</instanceName>
+  </ChildrenRoom>
+  <Curtain rdf:ID="Curtain_103"/>
+  <Car rdf:ID="Car1">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Car1</instanceName>
+    <hasLocation>
+      <Garage rdf:ID="Garage1">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Garage1</instanceName>
+      </Garage>
+    </hasLocation>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >56456479865</timestamp>
+  </Car>
+  <Time rdf:ID="Noon"/>
+  <Window rdf:ID="Little-Child_Windows">
+    <hasLocation rdf:resource="#LittleChildrenRoom"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Little-Child_Windows</instanceName>
+  </Window>
+  <Curtain rdf:ID="Curtain_104"/>
+  <Surprise rdf:ID="Surprised1">
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1</StateIntensity>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Surprised1</instanceName>
+  </Surprise>
+  <Hall rdf:ID="Hall_6">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Mission Robot's place is in the hall by default.</rdfs:comment>
+  </Hall>
+  <Weather rdf:ID="Cold"/>
+  <TV rdf:ID="TV1">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >454654645661231</timestamp>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TV1</instanceName>
+  </TV>
+  <Table rdf:ID="Table_125"/>
+  <Joyfulness rdf:ID="Joyful1">
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1</StateIntensity>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Joyfull1</instanceName>
+  </Joyfulness>
+  <Fan rdf:ID="Fan_90">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Fan_90</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >123585922656</timestamp>
+  </Fan>
+  <LightSensor rdf:ID="LightSensor2">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LightSensor2</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >77855566622222111</timestamp>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >HIGH</sensorValue>
+    <hasLocation rdf:resource="#BigChildrenRoom"/>
+  </LightSensor>
+  <HairIron rdf:ID="HairIron_75">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >HairIron_75</instanceName>
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >65568675684767878</timestamp>
+  </HairIron>
+  <Sadness rdf:ID="Sadness3">
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3</StateIntensity>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sadness3</instanceName>
+  </Sadness>
+  <Weather rdf:ID="Sunny"/>
+  <Chair rdf:ID="Chair_123"/>
+  <NoiseSensor rdf:ID="NoiseSensor2">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >NoiseSensor2</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4465545656454</timestamp>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDIUM</sensorValue>
+  </NoiseSensor>
+  <OfficeRoom rdf:ID="OfficeRoom1"/>
+  <Toy rdf:ID="Toy_129"/>
+  <Joyfulness rdf:ID="Joyful2">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Joyfull2</instanceName>
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2</StateIntensity>
+  </Joyfulness>
+  <owl:DataRange>
+    <owl:oneOf rdf:parseType="Resource">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+      >x</rdf:first>
+    </owl:oneOf>
+  </owl:DataRange>
+  <Table rdf:ID="Table_124"/>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <SupervisorRobot rdf:ID="Sawyer">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Sawyer is the supervisor of the robots. It monitorizes the activity of the other robots of the house</rdfs:comment>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Sawyer</name>
+        <hasLocation rdf:resource="#LivingRoom_15"/>
+        <hasActivity rdf:resource="#SupervisingRobots"/>
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Sawyer</instanceName>
+      </SupervisorRobot>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <LightSensor rdf:ID="LightSensor1">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >52613521237578125731253</timestamp>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LOW</sensorValue>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LightSensor1</instanceName>
+    <hasLocation rdf:resource="#Bedroom1"/>
+  </LightSensor>
+  <Door rdf:ID="Bedroom_Door">
+    <hasLocation rdf:resource="#Bedroom1"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <doorLocation rdf:resource="#Bedroom1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bedroom_Door</instanceName>
+  </Door>
+  <Door rdf:ID="Living-Kitchen_Door">
+    <doorLocation rdf:resource="#LivingRoom1"/>
+    <doorLocation rdf:resource="#Kitchen1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Living-Kitchen_Door</instanceName>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Door>
+  <NoiseSensor rdf:ID="NoiseSensor1">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >NoiseSensor1</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LOW</sensorValue>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >5456454564161</timestamp>
+    <hasLocation rdf:resource="#Bedroom1"/>
+  </NoiseSensor>
+  <Dryer rdf:ID="Dryer_78">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dryer_78</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1464786787</timestamp>
+    <hasLocation rdf:resource="#Bathroom1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+  </Dryer>
+  <Jacuzzi rdf:ID="Jacuzzi_76">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >57556547647</timestamp>
+    <hasLocation rdf:resource="#Bathroom1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Jacuzzi_76</instanceName>
+  </Jacuzzi>
+  <Sadness rdf:ID="Sadness1">
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1</StateIntensity>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sadness1</instanceName>
+  </Sadness>
+  <Chair rdf:ID="Chair_121"/>
+  <Door rdf:ID="Bedroom-Bathroom_Door">
+    <hasLocation rdf:resource="#Bathroom1"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <doorLocation rdf:resource="#Bathroom1"/>
+    <doorLocation rdf:resource="#Bedroom1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bedroom-Bathroom_Door</instanceName>
+  </Door>
+  <PetRobot rdf:ID="Dolly">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dolly_PetRobot</instanceName>
+    <hasLocation rdf:resource="#LittleJohn_Room"/>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dolly</name>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dolly is a PetRobot. It entertains childs</rdfs:comment>
+    <hasActivity rdf:resource="#Entertaining_9"/>
+  </PetRobot>
+  <Sadness rdf:ID="Sadness2">
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2</StateIntensity>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sadness2</instanceName>
+  </Sadness>
+  <Door rdf:ID="Office_Door">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Office_Door</instanceName>
+    <doorLocation rdf:resource="#OfficeRoom1"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <hasLocation rdf:resource="#OfficeRoom1"/>
+  </Door>
+  <NoiseSensor rdf:ID="NoiseSensor3">
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MEDIUM</sensorValue>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >545641521</timestamp>
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >NoiseSensor3</instanceName>
+  </NoiseSensor>
+  <Chair rdf:ID="Chair_122"/>
+  <Window rdf:ID="Office_Windows">
+    <hasLocation rdf:resource="#OfficeRoom1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Office_Windows</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Window>
+  <Motocycle rdf:ID="Motocycle_100">
+    <hasLocation rdf:resource="#Garage1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Motocycle_100</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >444565445656</timestamp>
+  </Motocycle>
+  <PC rdf:ID="PC_83">
+    <hasLocation rdf:resource="#Bedroom1"/>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >PC_83</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >32121315245645</timestamp>
+  </PC>
+  <Fridge rdf:ID="Fridge_94">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Fridge_94</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >8988978975</timestamp>
+    <hasLocation rdf:resource="#Kitchen1"/>
+  </Fridge>
+  <Door rdf:ID="Big-Child_Door">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <hasLocation rdf:resource="#BigChildrenRoom"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Big-Child_Door</instanceName>
+    <doorLocation rdf:resource="#BigChildrenRoom"/>
+  </Door>
+  <Toy rdf:ID="Toy_128"/>
+  <owl:DataRange>
+    <owl:oneOf rdf:parseType="Resource">
+      <rdf:rest rdf:parseType="Resource">
+        <rdf:rest rdf:parseType="Resource">
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >HIGH</rdf:first>
+        </rdf:rest>
+        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MEDIUM</rdf:first>
+      </rdf:rest>
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+      >LOW</rdf:first>
+    </owl:oneOf>
+  </owl:DataRange>
+  <Door rdf:ID="Garage-Out_Door">
+    <doorLocation>
+      <OutdoorSpace rdf:ID="Garden">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Garden</instanceName>
+      </OutdoorSpace>
+    </doorLocation>
+    <doorLocation rdf:resource="#Garage1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Garage-Out_Door</instanceName>
+    <hasLocation rdf:resource="#Garage1"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Door>
+  <Bathroom rdf:ID="Bathroom2"/>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <MissionRobot rdf:ID="Locke">
+        <hasLocation rdf:resource="#Hall_6"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >This is the robot  instance for the current SmartHouse. It's a mission robot. It can transport thins, or clean the house, or other types of house affairs.</rdfs:comment>
+        <hasActivity rdf:resource="#HouseWork_5"/>
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Locke_MissionRobot</instanceName>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Locke</name>
+      </MissionRobot>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <Window rdf:ID="Hall_Window">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Hall_Window</instanceName>
+    <hasLocation rdf:resource="#Hall1"/>
+  </Window>
+  <Toy rdf:ID="Toy_127"/>
+  <Weather rdf:ID="Rainy"/>
+  <Human rdf:ID="Jane">
+    <hasActivity>
+      <WatchingTV rdf:ID="WatchingTV1">
+        <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >WatchingTV1</instanceName>
+      </WatchingTV>
+    </hasActivity>
+    <hasState rdf:resource="#Joyful1"/>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Jane</instanceName>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Jane</name>
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</age>
+  </Human>
+  <TemperatureSensor rdf:ID="TemperatureSensor2">
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >8877565454245645476</timestamp>
+    <sensorValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LOW</sensorValue>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >TemperatureSensor2</instanceName>
+  </TemperatureSensor>
+  <Window rdf:ID="Big-Child_Right_Windows">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Big-Child_Right_Windows</instanceName>
+    <hasLocation rdf:resource="#BigChildrenRoom"/>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Window>
+  <WashingMachine rdf:ID="WashingMachine_80">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >444656465116</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >WashingMachine_80</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <hasLocation rdf:resource="#Bathroom1"/>
+  </WashingMachine>
+  <Door rdf:ID="Living-Child_Door">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Living-Child_Door</instanceName>
+    <doorLocation rdf:resource="#LivingRoom1"/>
+    <doorLocation rdf:resource="#Hall1"/>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+  </Door>
+  <ToyCar rdf:ID="ToyCar_85">
+    <hasLocation rdf:resource="#BigChildrenRoom"/>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2334578979546</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ToyCar_85</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+  </ToyCar>
+  <MobilePhone rdf:ID="MobilePhone_82">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ON</deviceStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >MobilePhone_82</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4564648789465</timestamp>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+  </MobilePhone>
+  <Window rdf:ID="Big-Child_Back_Windows">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Big-Child_Back_Windows</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <hasLocation rdf:resource="#BigChildrenRoom"/>
+  </Window>
+  <owl:DataRange>
+    <owl:oneOf rdf:parseType="Resource">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+      >COLD</rdf:first>
+      <rdf:rest rdf:parseType="Resource">
+        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >WARM</rdf:first>
+        <rdf:rest rdf:parseType="Resource">
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >HOT</rdf:first>
+        </rdf:rest>
+      </rdf:rest>
+    </owl:oneOf>
+  </owl:DataRange>
+  <Cooker rdf:ID="GasCooker">
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >GasCooker</instanceName>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >67446878487</timestamp>
+  </Cooker>
+  <Time rdf:ID="Night"/>
+  <Box rdf:ID="Box_126"/>
+  <Door rdf:ID="Garage-Hall_Door">
+    <hasLocation rdf:resource="#Garage1"/>
+    <doorLocation rdf:resource="#Hall1"/>
+    <doorLocation rdf:resource="#Garage1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Garage-Hall_Door</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Door>
+  <Sleeping rdf:ID="Sleeping1">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Sleeping</instanceName>
+  </Sleeping>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <Entertaining rdf:about="#PlayWithChildren"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <Window rdf:ID="Garage_Windows">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Garage_Windows</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <hasLocation rdf:resource="#Garage1"/>
+  </Window>
+  <Time rdf:ID="Evening"/>
+  <Window rdf:ID="Kitchen_Windows">
+    <hasLocation rdf:resource="#Kitchen1"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Kitchen_Windows</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Window>
+  <Door rdf:ID="Living-Garage_Door">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Living-Garage_Door</instanceName>
+    <doorLocation rdf:resource="#Hall1"/>
+    <doorLocation rdf:resource="#LivingRoom1"/>
+    <hasLocation rdf:resource="#LivingRoom1"/>
+  </Door>
+  <SystemTime rdf:ID="SystemTime_33">
+    <time rdf:datatype="http://www.w3.org/2001/XMLSchema#time"
+    >10:20:30</time>
+  </SystemTime>
+  <Human rdf:ID="LittleJohn">
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Harry</name>
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</age>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >LittleJohn</instanceName>
+    <hasActivity rdf:resource="#Sleeping1"/>
+    <hasState rdf:resource="#Joyful3"/>
+    <hasLocation rdf:resource="#BigChildrenRoom"/>
+  </Human>
+  <Window rdf:ID="Bathroom_2_Windows">
+    <hasLocation rdf:resource="#Bathroom2"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bathroom_2_Windows</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+  </Window>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <PetRobot rdf:about="#Dolly"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+  <Chair rdf:ID="Chair_118"/>
+  <Boredom rdf:ID="Boredom1">
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1</StateIntensity>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Boredom1</instanceName>
+  </Boredom>
+  <Chair rdf:ID="Chair_119"/>
+  <VacuumCleaner rdf:ID="VacuumCleaner_79">
+    <hasLocation rdf:resource="#BigChildrenRoom"/>
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >55454644</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VacuumCleaner_79</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+  </VacuumCleaner>
+  <Boredom rdf:ID="Boredom2">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Boredom2</instanceName>
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2</StateIntensity>
+  </Boredom>
+  <Curtain rdf:ID="Curtain_101"/>
+  <Window rdf:ID="Bathroom_1_Windows">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >CLOSED</objectStatus>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bathroom_1_Windows</instanceName>
+    <hasLocation rdf:resource="#Bathroom1"/>
+  </Window>
+  <Worry rdf:ID="Worry1">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Worry1</instanceName>
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1</StateIntensity>
+  </Worry>
+  <Dishwasher rdf:ID="Dishwasher_77">
+    <timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >555545545545</timestamp>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dishwasher_77</instanceName>
+    <deviceStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OFF</deviceStatus>
+    <hasLocation rdf:resource="#Kitchen1"/>
+  </Dishwasher>
+  <owl:DataRange>
+    <owl:oneOf rdf:parseType="Resource">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+      >LOW</rdf:first>
+      <rdf:rest rdf:parseType="Resource">
+        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >MEDIUM</rdf:first>
+        <rdf:rest rdf:parseType="Resource">
+          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+          >HIGH</rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:rest>
+      </rdf:rest>
+    </owl:oneOf>
+  </owl:DataRange>
+  <Boredom rdf:ID="Boredom3">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Boredom3</instanceName>
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >3</StateIntensity>
+  </Boredom>
+  <Human rdf:ID="John">
+    <hasActivity rdf:resource="#Sleeping1"/>
+    <hasState rdf:resource="#Boredom1"/>
+    <hasLocation rdf:resource="#Bedroom1"/>
+    <age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">31</age>
+    <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >John</name>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >John</instanceName>
+  </Human>
+  <Time rdf:ID="Morning"/>
+  <Door rdf:ID="Bathroom_3_Door">
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OPEN</objectStatus>
+    <hasLocation rdf:resource="#Bathroom3"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bathroom_3_Door</instanceName>
+    <doorLocation rdf:resource="#Bathroom3"/>
+  </Door>
+  <Worry rdf:ID="Worry2">
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Worry2</instanceName>
+    <StateIntensity rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2</StateIntensity>
+  </Worry>
+  <Door rdf:ID="Bathroom_2_Door">
+    <hasLocation rdf:resource="#Bathroom2"/>
+    <doorLocation rdf:resource="#Bathroom2"/>
+    <instanceName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Bathroom_2_Door</instanceName>
+    <objectStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >OPEN</objectStatus>
+  </Door>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3.1, Build 430)  http://protege.stanford.edu -->

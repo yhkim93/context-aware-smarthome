@@ -1,0 +1,177 @@
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="MonitoringGUI"
+	package="smarthouse.monitoring">
+
+	<imports>
+		<import>java.util.logging.*</import>
+		<import>jadex.adapter.fipa.*</import>
+		<import>jadex.util.*</import>
+		<import>java.util.*</import>
+		<import>jadex.runtime.*</import>
+		<import>jadex.runtime.impl.*</import>
+		<import>jadex.planlib.*</import>
+		<import>smarthouse.ontology.beanynizer.*</import>
+	</imports>
+		
+	<beliefs>
+	  <belief name="sensorType" exported="true" class="Vector">
+                    <fact>new Vector()</fact>
+      </belief>
+   </beliefs>
+	
+	<plans>
+		<!-- Initial plan for creating and updating the gui. -->
+		<plan name="robotsGUI">
+			<body class="StartRobotsGUIPlan"/>
+		</plan>
+		<plan name="sensorGUI">
+			<body class="StartSensorGUIPlan"/>
+		</plan>
+	</plans>
+
+	<events>
+		<messageevent name="requestContextData" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>
+             <!-- <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+            <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             -->
+		</messageevent>
+		
+		  <messageevent name="getSensorType" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"newSensor"</value>
+            </parameter>
+       </messageevent>
+		
+		
+		<messageevent name="newSensor" direction="send" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"newSensor"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+             </parameter>
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             
+        </messageevent>
+		
+		<messageevent name="enable" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"enable"</value>
+            </parameter>
+        </messageevent>
+		
+		<messageevent name="disable" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"disable"</value>
+            </parameter>
+        </messageevent>
+		
+		<messageevent name="update" direction="send" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"update"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+             </parameter>
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             
+        </messageevent>
+		
+			<messageevent name="updateD" direction="send" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"update"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Device.class</value>
+             </parameter>
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             
+        </messageevent>
+		
+		 <messageevent name="context_info" direction="send" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+           <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+            </parameter>
+           <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+            </parameter>
+             
+        </messageevent>
+		
+		</events>
+
+	<properties>
+ 		<!-- Only log outputs >= level are printed. -->
+       <property name="logging.level">Level.INFO</property>
+ 		<!-- The default parent handler prints out log messages on the console. -->
+       <property name="logging.useParentHandlers">true</property>
+    </properties>
+
+	<configurations>
+		<configuration name="default">
+			
+			<plans>
+				<!--<initialplan ref="robotsGUI"/>-->
+				
+				<initialplan ref="sensorGUI"/>
+				</plans>
+		</configuration>
+	</configurations>
+
+</agent>
+

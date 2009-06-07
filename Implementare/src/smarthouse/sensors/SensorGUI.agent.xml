@@ -1,0 +1,119 @@
+<!--
+	<H3>TranslationAgent: Lesson F1.</H3>
+	Using internal events to broadcast information.
+	<H4>Explanation</H4>
+	The agent creates a gui and visualizes issued
+	translation requests.
+-->
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="SensorGUI"
+	package="smarthouse.sensors">
+
+	<imports>
+		<import>java.util.logging.*</import>
+		<import>jadex.adapter.fipa.*</import>
+		<import>jadex.util.*</import>
+		<import>java.util.*</import>
+		<import>jadex.runtime.*</import>
+		<import>jadex.runtime.impl.*</import>
+		<import>jadex.planlib.*</import>
+		<import>smarthouse.ontology.beanynizer.*</import>
+		
+	</imports>
+	<capabilities>
+		<!-- Include the protocols cap. -->
+		<capability name="procap" file="jadex.planlib.Protocols"/>
+		<!-- Include the df cap. -->
+		<capability name="dfcap" file="jadex.planlib.DF"/>
+		<capability name="amscap" file="jadex.planlib.AMS" />
+	</capabilities>
+
+	<beliefs>
+		<belief name="sensorValue" exported="true" class="int">
+			<fact>0</fact>
+		</belief>
+		
+		<beliefset name="sensorData" exported="true" class="Sensor">
+			<fact>new Sensor()</fact>
+		</beliefset>
+				
+	</beliefs>
+
+	<goals>
+		<!-- Include request goal type from dfcap. -->
+		<achievegoalref name="rp_initiate">
+			<concrete ref="procap.rp_initiate"/>
+		</achievegoalref>
+
+		<!-- Include df search goal type from dfcap. -->
+		<achievegoalref name="df_search">
+			<concrete ref="dfcap.df_search"/>
+		</achievegoalref>
+		
+		<achievegoalref name="ams_create_agent">
+        <concrete ref="amscap.ams_create_agent" />
+    </achievegoalref>
+	</goals>
+
+	<plans>
+		<!-- Passive plan for translating words, when a request
+			translation message is received. -->
+		<plan name="dfsearch">
+			<body class="GUIPlan"/>
+			<trigger>
+				<messageevent ref="request"/>
+			</trigger>
+		</plan>
+		
+		
+		<!-- Initial plan for creating and updating the gui. -->
+		<plan name="gui">
+			<body class="StartGUIPlan"/>
+			<!--<body>new GUIPlan()</body>-->
+		</plan>
+	</plans>
+
+	<events>
+		<messageevent name="request" direction="send_receive" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+		</messageevent>
+		
+		<messageevent name="message" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.INFORM</value>
+			</parameter>
+			<parameter name="language" class="String" direction="fixed">
+       			 <value>SFipa.NUGGETS_XML</value>
+   			</parameter>
+   			<parameter name="ontology" class="String" direction="fixed">
+        		<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+    		</parameter>
+		</messageevent>
+		
+				
+		<internalevent name="request_search"/>
+	</events>
+
+	<properties>
+ 		<!-- Only log outputs >= level are printed. -->
+       <property name="logging.level">Level.INFO</property>
+ 		<!-- The default parent handler prints out log messages on the console. -->
+       <property name="logging.useParentHandlers">true</property>
+    </properties>
+
+	<configurations>
+		<configuration name="default">
+			
+			<plans>
+				<initialplan ref="gui"/>
+			</plans>
+		</configuration>
+	</configurations>
+
+</agent>
+
