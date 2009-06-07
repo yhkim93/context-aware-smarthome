@@ -1,0 +1,167 @@
+<!--
+	<H3>TranslationAgent: Lesson F1.</H3>
+	Using internal events to broadcast information.
+	<H4>Explanation</H4>
+	The agent creates a gui and visualizes issued
+	translation requests.
+-->
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="RobotManager"
+	package="smarthouse.robots">
+
+	<imports>
+		<import>java.util.logging.*</import>
+		<import>java.util.Vector</import>
+		<import>jadex.adapter.fipa.*</import>
+		<import>jadex.util.*</import>
+		<import>jadex.runtime.*</import>
+		<import>jadex.runtime.impl.*</import>
+		<import>jadex.planlib.*</import>
+		<import>smarthouse.ontology.beanynizer.*</import>
+		
+	</imports>
+
+	<capabilities>
+		<capability name="amscap" file="jadex.planlib.AMS" />
+		<capability name="dfcap" file="jadex.planlib.DF"/>
+	</capabilities>
+	
+
+	<beliefs>
+		 <belief name="robotType" exported="true" class="Vector">
+                    <fact>new Vector()</fact>
+     	 </belief>
+     	  <belief name="newRobot" exported="true" class="Robot">
+           		    <fact>new Robot()</fact>
+      	  </belief>
+	</beliefs>
+
+
+	<goals>
+		<achievegoalref name="ams_create_agent">
+        	<concrete ref="amscap.ams_create_agent" />
+    	</achievegoalref>
+    	     <!-- Used for registering the dealer at the df. -->
+        <achievegoalref name="df_register">
+             <concrete ref="dfcap.df_register"/>
+        </achievegoalref>
+                
+                <!-- Used for deregistering the dealer at the df. -->
+         <achievegoalref name="df_deregister">
+                <concrete ref="dfcap.df_deregister"/>
+         </achievegoalref>
+				
+	</goals>
+
+	<plans>
+		<plan name="getRobotsPlan">
+			<body class="RobotManagerPlan"/>
+		</plan>
+		
+		<!--plan name="newRobot">
+			<body class="NewSensorPlan"/>
+			<trigger>
+				<messageevent ref="newSensor"/>
+			</trigger>
+		</plan-->
+		
+	
+	</plans>
+
+	<events>
+		<messageevent name="requestContextData" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>         
+       </messageevent>
+       
+       <messageevent name="getRobotType" direction="receive" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"newSensor"</value>
+            </parameter>
+       </messageevent>
+       
+       
+       <messageevent name="context_info" direction="send_receive" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>java.util.Vector.class</value>
+             </parameter>
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             
+        </messageevent>
+        
+         <messageevent name="newRobot" direction="receive" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"newSensor"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+             </parameter>
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             
+        </messageevent>
+        
+        
+        <messageevent name="update" direction="send" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"update"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+             </parameter>
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+        </messageevent>
+    </events>
+
+	<properties>
+ 		<!-- Only log outputs >= level are printed. -->
+       <property name="logging.level">Level.INFO</property>
+ 		<!-- The default parent handler prints out log messages on the console. -->
+       <property name="logging.useParentHandlers">true</property>
+    </properties>
+
+	<configurations>
+		<configuration name="default">			
+			<plans>
+				<initialplan ref="getRobotsPlan"/>
+			</plans>
+		</configuration>
+	</configurations>
+
+</agent>

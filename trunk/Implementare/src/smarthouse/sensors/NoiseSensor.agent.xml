@@ -1,0 +1,193 @@
+<agent xmlns="http://jadex.sourceforge.net/jadex"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://jadex.sourceforge.net/jadex 
+	                    http://jadex.sourceforge.net/jadex-0.96.xsd"
+	name="NoiseSensor"
+	package="smarthouse.sensors">
+
+	<imports>
+		<import>jadex.planlib.*</import>
+		<import>jadex.adapter.fipa.*</import>
+		<import>java.util.logging.*</import>
+		<import>smarthouse.ontology.beanynizer.Sensor</import>
+	</imports>
+
+	<capabilities>
+		<capability name="amscap" file="jadex.planlib.AMS" />
+		<capability name="dfcap" file="jadex.planlib.DF"/>
+	</capabilities>
+	    
+	
+	    
+	<beliefs>
+		<belief name="sensor" exported="true" class="Sensor">
+			<fact>new Sensor()</fact>
+		</belief>
+			
+	</beliefs>
+	
+	<goals>
+	
+		<achievegoalref name="ams_create_agent">
+			<concrete ref="amscap.ams_create_agent" />
+		</achievegoalref>
+		
+		<!-- Make the keep registered goal available. -->
+		<maintaingoalref name="df_keep_registered">
+			<concrete ref="dfcap.df_keep_registered"/>
+		</maintaingoalref>
+
+		<!-- Make the register goal available. - ->
+		<achievegoalref name="df_register">
+			<concrete ref="dfcap.df_register"/>
+		</achievegoalref>-->
+
+		<!-- Make the deregister goal available. - ->
+		<achievegoalref name="df_deregister">
+			<concrete ref="dfcap.df_deregister"/>
+		</achievegoalref>-->
+	</goals>
+	
+	
+	<plans>
+		<plan name="sensorUpdate">
+        	 <body class="InitSensorPlan"/>
+        	 <trigger>
+				<messageevent ref="context_info"/>
+			 </trigger>	
+     	</plan>
+     	
+     	 <plan name="update">
+        	 <body class="InitSensorPlan"/>
+        	 <trigger>
+				<messageevent ref="update"/>
+			 </trigger>	
+     	</plan>
+     	
+     	<plan name="enable">
+        	 <body class="EnableSensorPlan"/>
+        	 <trigger>
+				<messageevent ref="enable"/>
+			 </trigger>	
+     	</plan>
+     	
+     	<plan name="disable">
+        	 <body class="DisableSensorPlan"/>
+        	 <trigger>
+				<messageevent ref="disable"/>
+			 </trigger>	
+     	</plan>
+     			
+	</plans>
+
+	<events>
+		<messageevent name="requestContextData" direction="send" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>
+          </messageevent>
+          
+        <messageevent name="enable" direction="receive" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"enable"</value>
+            </parameter>
+          </messageevent>
+          
+        <messageevent name="disable" direction="receive" type="fipa">
+			<parameter name="performative" class="String" direction="fixed">
+				<value>SFipa.REQUEST</value>
+			</parameter>
+			<parameter name="conversation-id" class="String" direction="fixed">
+                <value>"disable"</value>
+            </parameter>
+          </messageevent>
+       
+       <messageevent name="context_info" direction="receive" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"contextSharingStart"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+           <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+            </parameter>
+           <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+            </parameter>
+             
+        </messageevent>
+        
+         <messageevent name="update" direction="receive" type="fipa">
+            <parameter name="performative" class="String" direction="fixed">
+                <value>SFipa.INFORM</value>
+            </parameter>
+            <parameter name="conversation-id" class="String" direction="fixed">
+                <value>"update"</value>
+            </parameter>
+            <parameter name="language" class="String" direction="fixed">
+            	<value>SFipa.NUGGETS_XML</value>
+             </parameter>
+             <parameter  name="content-class" class="Class" direction="fixed">
+             	<value>Sensor.class</value>
+             </parameter>
+             <parameter name="ontology" class="String" direction="fixed">
+             	<value>smarthouse.ontology.beanynizer.SmartHouse.ONTOLOGY_NAME</value>
+             </parameter>
+             
+        </messageevent>
+		
+		
+	</events>
+
+	<properties>
+ 		<!-- Only log outputs >= level are printed. -->
+		<property name="logging.level">Level.INFO</property>
+ 		<!-- The default parent handler prints out log messages on the console. -->
+		<property name="logging.useParentHandlers">true</property>
+		<!--<property name="debugging">true</property>-->
+    </properties>
+
+	<configurations>
+		<configuration name="default">
+			<goals>
+				<initialgoal ref="df_keep_registered">
+					<parameter ref="description">
+						<value>
+ 							SFipa.createAgentDescription(null,
+							SFipa.createServiceDescription("NoiseSensor",
+			 				"Sensor", "SmartHouse"))
+ 						</value>
+					</parameter>
+					<parameter ref="leasetime">
+						<value>20000</value>
+					</parameter>
+				</initialgoal>
+				 
+				<!-- Initial goal to register the agent at startup. - ->
+				<initialgoal ref="df_register">
+					<parameter ref="description">
+						<value>
+ 							SFipa.createAgentDescription(null,
+							SFipa.createServiceDescription("NoiseSensor",
+			 				"Sensor", "SmartHouse"))
+ 						</value>
+					</parameter>
+				</initialgoal>-->
+				
+				<!-- End goal to deregister the agent at shutdown. - ->
+				<endgoal ref="df_deregister"/>-->
+			</goals>
+		</configuration>
+	</configurations>
+
+</agent>
