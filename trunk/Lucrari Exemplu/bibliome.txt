@@ -6,7 +6,7 @@
 [06] Young-Guk Ha, Joo-Chan Sohn, Young-Jo Cho, and Hyunsoo Yoon, „Towards a Ubiquitous Robotic Companion: Design and Implementation of Ubiquitous Robotic Service Framework”, Sept. 15, 2005
 [07] D. Wang, X. Ma, and X. Dai, “Web-Based Robotic Control System with Flexible Framework,” Proc. IEEE Int’l Conf. on Robotics and Automation (ICRA 2004), New Orleans, LA, Apr. 2004, pp. 3351 - 3356.
 [08] W3C Recommendation, Web Services Architecture, W3C, 2004, URL: http://www.w3c.org/TR/ws-arch/ 
-[09]  W3C Recommendation, RDF Primer, W3C, 2004, URL:http://www.w3c.org/TR/rdf-primer/.
+[09] W3C Recommendation, RDF Primer, W3C, 2004, URL:http://www.w3c.org/TR/rdf-primer/.
 [10] L. Miller, A. Seaborne, and A. Reggiori, “Three Implementations of SquishQL, a Simple RDF Query Language,” Proc. 1st Int’l Semantic Web Conf. (ISWC 2002), LNCS 2342, Springer-Verlag, 2002, pp. 423-435.
 [11] Z. Zenn Bien. Human-friendly Man-Machine Interaction in Smart Home. Keynote speech at the 3rd International Conference On Smart homes and health Telematic, Sherbrooke, Québec, Canada, July 4-6, 2005.
 [12] A. Helal, W. Mann, H. Elzabadani, J. King, Y. Kaddourah and E. Jansen, "Gator Tech Smart House: A Programmable Pervasive Space", IEEE Computer magazine, March 2005, pp. 64-74
@@ -62,3 +62,6 @@ Connected Home.” Proceeding of 1st International Conference On Smart Homes and H
 [61] Zeus – BT Intelligent Agent Research http://www.opensource.org/
 [62] Jadex User Guide, http://prdownloads.sourceforge.net/jadex/userguide-0.96.pdf
 [63] Jadex Tool Guide, http://prdownloads.sourceforge.net/jadex/toolguide-0.96.pdf
+[64] W3C Recommendation, SOAP Version 1.2 Primer, W3C, 2003, URL: http://www.w3c.org/TR/ soap12-part0/
+[65] N.F. Noy, R.W. Fergerson, M.A. Musen, The knowledge model of protege-2000: combining interoperability and flexibility, in: 12th International Conference in Knowledge Engineering and Knowledge Management (EKA 2000), Lecture Notes in Artificial Intelligence, vol. 1937, Springer, Berlin, 2000, pp. 17–32.
+[66] J.C. Arpirez, O. Corcho, M. Fernandez-Lopez, A. Gomez-Perez, WebODE: a scalable ontological engineering workbench, in: First International Conference on Knowledge Capture (KCAP01), ACM Press, Victoria, 2001, pp.6–13.
